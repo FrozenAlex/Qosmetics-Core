@@ -11,7 +11,7 @@
 #include <functional>
 #include <set>
 
-DECLARE_CLASS_CODEGEN_INTERFACES(Qosmetics::Core, QosmeticObjectTableData, UnityEngine::MonoBehaviour, classof(HMUI::TableView::IDataSource*),
+DECLARE_CLASS_CODEGEN_INTERFACES(Qosmetics::Core, QosmeticObjectTableData, UnityEngine::MonoBehaviour, HMUI::TableView::IDataSource*) {
         DECLARE_INSTANCE_FIELD(HMUI::TableView*, tableView);
         DECLARE_INSTANCE_FIELD(Il2CppString*, reuseIdentifier);
         DECLARE_INSTANCE_FIELD(float, cellSize);
@@ -36,4 +36,4 @@ DECLARE_CLASS_CODEGEN_INTERFACES(Qosmetics::Core, QosmeticObjectTableData, Unity
         std::function<void(HMUI::TableCell*)> onSelect = nullptr;
         std::function<void(HMUI::TableCell*)> onDelete = nullptr;
         std::set<Descriptor, DescriptorComparator> objectDescriptors = {};
-)
+};

@@ -16,7 +16,7 @@
 #include "bsml/shared/BSML/Components/Backgroundable.hpp"
 #include "bsml/shared/BSML/Components/ClickableImage.hpp"
 
-DECLARE_CLASS_CODEGEN(Qosmetics::Core, QosmeticObjectTableCell, HMUI::TableCell,
+DECLARE_CLASS_CODEGEN(Qosmetics::Core, QosmeticObjectTableCell, HMUI::TableCell) {
         DECLARE_INSTANCE_FIELD(TMPro::TextMeshProUGUI*, _name);
         DECLARE_INSTANCE_FIELD(TMPro::TextMeshProUGUI*, _sub);
         DECLARE_INSTANCE_FIELD(HMUI::HoverHint*, _hover);
@@ -55,5 +55,4 @@ DECLARE_CLASS_CODEGEN(Qosmetics::Core, QosmeticObjectTableCell, HMUI::TableCell,
         std::function<void(QosmeticObjectTableCell*)> onSelect;
         std::function<void(QosmeticObjectTableCell*)> onDelete;
         Descriptor descriptor;
-
-)
+};

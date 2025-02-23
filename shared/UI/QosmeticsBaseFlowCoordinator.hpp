@@ -6,7 +6,7 @@
 #include "UnityEngine/Sprite.hpp"
 #include "UnityEngine/UI/Button.hpp"
 
-DECLARE_CLASS_CODEGEN(Qosmetics::Core, QosmeticsBaseFlowCoordinator, HMUI::FlowCoordinator,
+DECLARE_CLASS_CODEGEN(Qosmetics::Core, QosmeticsBaseFlowCoordinator, HMUI::FlowCoordinator) {
     DECLARE_CTOR(ctor);
     DECLARE_INSTANCE_FIELD(HMUI::FlowCoordinator*, qosmeticsFlowCoordinator);
     DECLARE_INSTANCE_FIELD(StringW, name);
@@ -19,5 +19,4 @@ DECLARE_CLASS_CODEGEN(Qosmetics::Core, QosmeticsBaseFlowCoordinator, HMUI::FlowC
     DECLARE_INSTANCE_METHOD(StringW, get_menuName);
 
     DECLARE_OVERRIDE_METHOD_MATCH(void, DidActivate_Base, &::HMUI::FlowCoordinator::DidActivate, bool firstActivation, bool addedToHierarchy, bool screenSystemEnabling);
-
-)
+};

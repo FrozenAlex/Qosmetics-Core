@@ -10,8 +10,8 @@ namespace Qosmetics::Core {
     class QosmeticObjectTableCell;
 }
 
-DECLARE_CLASS_CODEGEN(Qosmetics::Core, DeletionConfirmationModal, UnityEngine::MonoBehaviour,
-        DECLARE_INSTANCE_FIELD(TMPro::TextMeshProUGUI*, objectName);
+DECLARE_CLASS_CODEGEN(Qosmetics::Core, DeletionConfirmationModal, UnityEngine::MonoBehaviour) {
+    DECLARE_INSTANCE_FIELD(TMPro::TextMeshProUGUI*, objectName);
         DECLARE_INSTANCE_FIELD(BSML::ModalView*, modal);
         DECLARE_INSTANCE_METHOD(void, Dismiss);
         DECLARE_INSTANCE_METHOD(void, Confirm);
@@ -21,4 +21,4 @@ DECLARE_CLASS_CODEGEN(Qosmetics::Core, DeletionConfirmationModal, UnityEngine::M
         void Show(QosmeticObjectTableCell* cellToDelete);
 
         QosmeticObjectTableCell* currentCell;
-)
+};

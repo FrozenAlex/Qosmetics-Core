@@ -30,7 +30,7 @@ namespace Qosmetics::Core::BundleUtils
             co_return;
         }
 
-        auto byteArr = il2cpp_utils::vectorToArray(bytes);
+        auto byteArr = ArrayW(bytes);
         co_yield custom_types::Helpers::CoroutineHelper::New(LoadBundleFromMemoryAsync(byteArr, out));
         co_return;
     }
